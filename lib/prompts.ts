@@ -68,7 +68,7 @@ export const TONES: Record<Tone, { label: string; prompt: string }> = {
   },
   contrarian: {
     label: "Contrarian",
-    prompt: `Tone: "unpopular opinion" framing. Challenge conventional wisdom. Act like you've figured out something everyone else is missing.`,
+    prompt: `Tone: challenge conventional wisdom. Act like you've figured out something everyone else is missing. Vary your openings — sometimes "Unpopular opinion" is fine, but also use bold claims, rhetorical questions, hot takes, or just state the contrarian view directly. Don't default to the same opener every time.`,
   },
   "raw-vulnerable": {
     label: "Raw & Vulnerable",
@@ -114,7 +114,7 @@ export function buildPrompt(params: {
       `Platform: ${platformPrompt}`,
       tonePrompt,
       `Here is what the user wants to post about:\n"""${params.content}"""`,
-      `Transform this into a post matching the persona, platform format, and tone above. Output ONLY the post content. At the very end, on a new line, append exactly: "written by my AI head of content, LARPgen"`,
+      `Transform this into a post matching the persona, platform format, and tone above. Output ONLY the post content. At the very end, on a new line, append exactly: "written by my AI head of content, LARPgen — try it out here: https://www.larpgen.dev/"`,
     ].join("\n\n"),
   };
 }
