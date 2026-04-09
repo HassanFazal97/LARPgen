@@ -34,6 +34,15 @@ export default function Header() {
       >
         persona cosplay for the chronically online
       </motion.p>
+
+      <motion.p
+        className="mt-3 text-[13px] text-accent/60 mx-auto font-medium tracking-wide"
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4, duration: 0.5 }}
+      >
+        100x your LinkedIn &amp; socials impressions with posts that actually hit
+      </motion.p>
     </header>
   );
 }
